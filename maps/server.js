@@ -60,6 +60,10 @@ app.get("/payment/receipt", (request, response) => {
     response.sendFile(__dirname + "/receipt.html");
 });
 
+app.post("/payment/receipt", (request, response) => {
+    response.sendFile(__dirname + "/receipt.html");
+});
+
 app.get("/stores", (request, response) => {
     Shop.find()
         .then( (result) => {
