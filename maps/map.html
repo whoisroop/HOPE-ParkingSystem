@@ -19,9 +19,9 @@
             font-family: Ubuntu;
             box-sizing: border-box;
             
-            background-color: #03e9f4;
+            background-color: #4082E4;
             background-repeat: no-repeat;
-            background-size: cover; */
+            background-size: cover; 
             background-size: cover; 
             align-items: center;
             align-content: center;
@@ -39,10 +39,12 @@
             font-size: 14px;
             text-decoration: none;
             font-weight: bold;
+           
         }
 
         h1{
             margin: 6px 0px;
+            margin-left: 50px;
         }
     </style>
     
@@ -61,12 +63,10 @@
 </head>
 <body>
     
-    <center><a href="/landing" style="height: 100%; color: black;"><h1><i class="fas fa-map-marked" style="margin: 6px;"></i>Parking Space Locator</h1></a>
-    </center>
+    <a href="/landing" style="height: 100%; color: black;"><h1><i class="fas fa-map-marked" style="margin: 6px;"></i>Parking Space Locator</h1></a>
+    
     <div id='map'></div>
-    <div id="loc"></div>
-
-    <button id="reset">Reset</button>
+     
 
     <script src="/js/map.js"></script>
 
