@@ -8,11 +8,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
     
         *{
+            box-sizing: border-box;
             margin: 0px;
             padding: 0px;
-            box-sizing: border-box;
         }
-        
+
         body{
             height: 90vh;
             width: 90vw;
@@ -21,11 +21,6 @@
             /* background: url("/images/map-bg.jpg");
             background-repeat: no-repeat;
             background-size: cover; */
-        }
-
-        .container{
-            height: 100%;
-            width: 100%;
         }
 
         #map{
@@ -37,6 +32,10 @@
             font-size: 14px;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        h1{
+            margin: 6px 0px;
         }
     </style>
     
@@ -54,18 +53,14 @@
     <title>Parking Space Locator</title>
 </head>
 <body>
-    <h1><i class="fas fa-map-marked"></i>Store Locator</h1>
+    <a href="/landing" style="height: 100%; color: #3e3e3e;"><h1><i class="fas fa-map-marked" style="margin: 6px;"></i>Parking Space Locator</h1></a>
 
-    <div class="container">
+    <div id='map'></div>
+    <div id="loc"></div>
 
-        <a href="/landing"><button type="submit">Home Page</button></a>
-        <div id='map'></div>
-        <!-- <button type="submit" id="get">What's Lattitude & Langitude?</button> -->
-        <div id="loc"></div>
+    <button id="reset">Reset</button>
 
+    <script src="/js/map.js"></script>
 
-        <script src="/js/map.js"></script>
-
-    </div>
 </body>
 </html>

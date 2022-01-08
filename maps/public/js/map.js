@@ -35,13 +35,13 @@ mapboxgl: mapboxgl
 );
 
 //Add Marker
-const marker = new mapboxgl.Marker({
-    color: "#3e3e3e",
-    draggable: true
-    })
-    .setLngLat(SVNIT)
-    .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML("SVNIT"))
-    .addTo(map);
+// const marker = new mapboxgl.Marker({
+//     color: "#3e3e3e",
+//     draggable: true
+//     })
+//     .setLngLat(SVNIT)
+//     .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML("SVNIT"))
+//     .addTo(map);
 
 //Enabling GEOLOCATE
 const geoLocate = new mapboxgl.GeolocateControl({
@@ -53,13 +53,6 @@ const geoLocate = new mapboxgl.GeolocateControl({
     })
 
 map.addControl(geoLocate);
-
-//Get Lattitude & Longitude
-const btn = document.getElementById("get");
-btn.addEventListener("click", () => {
-    const newLoc = marker.getLngLat();
-    document.getElementById("loc").innerHTML = newLoc;
-})
 
 //Connect With DataBase
 async function getStores(){
@@ -94,4 +87,10 @@ async function getStores(){
 
 getStores();
 
-//Add Markers
+const reset = document.getElementById("reset");
+reset.addEventListener("click", () => {
+    fetch("/map/reset", {
+        method: "GET"
+    });
+    window.location.href = "/map";
+})
