@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/forms.css">
+    
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>Add a parking slot</h2>
+      
+      <form name="contactForm" id="form-details">
+        <div class="user-box">
+          <input type="text" name="name" required="">
+          <label>Name</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="num" required="" maxlength="10" minlength="10">
+          <label>Contact number</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="addr" id="address" required="">
+          <label>Address</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="upi" required="">
+          <label>UPI ID</label>
+        </div>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <input type="submit" value="SUBMIT">
+                  
+        </a>
+      </form>
+    </div>
+
+  <script>
+    const form = document.getElementById("form-details");
+    const address = document.getElementById("address");
+
+    form.addEventListener("submit", (x) => {
+      x.preventDefault();
+
+      let entry = {
+        storeId: 0,
+        address: address.value
+      };
+
+      try {
+        fetch("/stores", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(entry)
+      });
+
+        alert("Parking Space Added!");
+        window.location.href = "/map";
+      } 
+      
+      catch (error) {
+        console.log(error);
+      }
+    })
+  </script>
+  </body>
+</html>
+

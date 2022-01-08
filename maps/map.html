@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+        *{
+            font-family: Ubuntu;
+            margin: 4px;
+            padding: 2px;
+            box-sizing: border-box;
+        }
+
+        #map{
+            width: 800px;
+            height: 600px;
+        }
+
+        a{
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MapBox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Search Box MapBox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css"></link>
+
+    <title>Parking Space Locator</title>
+</head>
+<body>
+    <h1><i class="fas fa-map-marked"></i>Store Locator</h1>
+    <a href="/landing"><button type="submit">Home Page</button></a>
+    <div id='map'></div>
+    <button type="submit" id="get">What's Lattitude & Langitude?</button>
+    <div id="loc"></div>
+
+
+    <script src="/js/map.js"></script>
+</body>
+</html>
