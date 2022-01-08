@@ -44,12 +44,20 @@ app.get("/landing", (request, response) => {
     response.sendFile(__dirname + "/landing.html");
 });
 
+app.get("/landing/about", (request, response) => {
+    response.sendFile(__dirname + "/about.html");
+});
+
 app.get("/map", (request, response) => {
     response.sendFile(__dirname + "/map.html");
 })
 
 app.get("/payment", (request, response) => {
     response.sendFile(__dirname + "/payment.html");
+});
+
+app.get("/payment/receipt", (request, response) => {
+    response.sendFile(__dirname + "/receipt.html");
 });
 
 app.get("/stores", (request, response) => {
