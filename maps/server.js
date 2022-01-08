@@ -52,6 +52,10 @@ app.get("/payment", (request, response) => {
     response.sendFile(__dirname + "/payment.html");
 });
 
+app.get("/payment/receipt", (request, response) => {
+    response.sendFile(__dirname + "/receipt.html");
+});
+
 app.get("/stores", (request, response) => {
     Shop.find()
         .then( (result) => {

@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    font-family: Ubuntu;
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
   }
 
-html {}
   body {
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    /* background: linear-gradient(#141e30, #243b55); */
+    background-image: url("/images/form-bg.jpg");
+    background-size: cover;
   }
   
   .login-box {
@@ -17,10 +24,10 @@ html {}
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
+    background: rgb(0 10 35 / 70%);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+    border-radius: 36px;
   }
   
   .login-box h2 {
@@ -64,14 +71,14 @@ html {}
     font-size: 12px;
   }
   
-  .login-box form a {
+  .login-box form a, input[type="SUBMIT"] {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
     color: #03e9f4;
     font-size: 16px;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     overflow: hidden;
     transition: .5s;
     margin-top: 40px;
@@ -200,3 +207,16 @@ input[type="submit"]:hover {
   text-align: center;
 }
   
+a{
+  padding: 0px;
+  margin: 0px;
+}
+
+input[type="Submit"]{
+  padding: 12px;
+  margin: 0px;
+  background: none;
+  border: none;
+  font-family:ubuntu;
+  letter-spacing: 0.6px;
+}
