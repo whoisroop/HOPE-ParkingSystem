@@ -20,8 +20,8 @@ The website aims to solve parking problems, allowing visitors to find parking in
 
 We have used a number of open source projects to work properly:
 
-- [node.js] - evented I/O for the backend
-- [Express] - backend development
+- [node.js](https://nodejs.org/en/) - evented I/O for the backend
+- [Express](http://expressjs.com/) - backend development
 - [MongoDB](https://www.mongodb.com/) - database
 - [MapQuest](https://www.mapquest.com/) - for maps
 - [mapbox](https://www.mapbox.com/) -for navigation
