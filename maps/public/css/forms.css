@@ -71,7 +71,21 @@ html {
     font-size: 12px;
   }
   
-  .login-box form a, input[type="SUBMIT"] {
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+
+  input[type="SUBMIT"] {
     position: relative;
     display: inline-block;
     padding: 10px 20px;

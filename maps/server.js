@@ -36,7 +36,7 @@ app.listen(port, () => {
     console.log(`Listening On Port ${port} | MODE: ${process.env.NODE_ENV}`);
 })
 
-app.get("/login", (request, response) => {
+app.get("/", (request, response) => {
     response.sendFile(__dirname + "/login.html");
 });
 

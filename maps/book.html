@@ -5,35 +5,37 @@
   </head>
   <body>
     <div class="login-box">
-      <h2>Confirm Your Details!</h2>
+      <h2>Book Parking Space</h2>
       
-      <form name="contactForm">
+      <form name="contactForm" id="form-details">
         <div class="user-box">
           <input type="text" name="name" required="">
           <label>Name</label>
         </div>
         <div class="user-box">
           <input type="text" name="num" required="" maxlength="10" minlength="10">
-          <label>Contact number</label>
+          <label>Contact Number</label>
         </div>
-        
-        <a href="/payment">
+        <a href="#">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          <input type="submit" value="SUBMIT" id="submit">     
+          <input type="submit" value="Submit">
         </a>
       </form>
     </div>
-
     <script>
-      const submit = document.getElementById("submit");
-      submit.addEventListener("click", () => {
-        alert("Parking Booked!");
-        window.location.href = "/payment"
-      })
-    </script>
+    const form = document.getElementById("form-details");
+
+    form.addEventListener("submit", (x) => {
+      x.preventDefault();
+
+        alert("Redirecting For Payment");
+        window.location.href = "/payment"; 
+      
+    })
+  </script>
   </body>
 </html>
 
