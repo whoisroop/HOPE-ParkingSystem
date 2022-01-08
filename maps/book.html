@@ -22,11 +22,18 @@
           <span></span>
           <span></span>
           <span></span>
-          <input type="submit" value="SUBMIT">
-                  
+          <input type="submit" value="SUBMIT" id="submit">     
         </a>
       </form>
     </div>
+
+    <script>
+      const submit = document.getElementById("submit");
+      submit.addEventListener("click", () => {
+        alert("Parking Booked!");
+        window.location.href = "/payment"
+      })
+    </script>
   </body>
 </html>
 
